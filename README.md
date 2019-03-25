@@ -37,7 +37,7 @@ You should get your interbase.so ! Wooah
   <li>Unzip downloaded sources, rename it to "php" and move it to your MAMP include folder /Applications/MAMP/bin/php/php7.1.1/</li>
   <li>Enter to interbase extension folder
    cd /Applications/MAMP/bin/php/php7.1.1/include/php/ext/interbase/</li>
-  <li>Run phpize
+  <li>Run phpize with command 
    /Applications/MAMP/bin/php/php7.1.1/bin/phpize</li>
   <li>Run configure ./configure --with-php-config=/Applications/MAMP/bin/php/php7.1.1/bin/php-config </li>
   <li>Create symbolic link to Firebird ibase.h and iberror.h in our include/php folder so
