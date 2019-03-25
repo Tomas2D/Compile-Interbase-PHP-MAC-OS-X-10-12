@@ -49,3 +49,9 @@ You should get your interbase.so ! Wooah
 </ol>
 
 You should get your interbase.so (/Applications/MAMP/bin/php/php7.1.1/include/php/ext/interbase/modules/interbase.so) ! Wooah
+
+
+## ATTENTION FOR MAMP USERS (Mac OS)
+
+Be sure that you are not running PHP in CGI mode (you will propably get 500 error code during connection to database) !
+
