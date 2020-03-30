@@ -1,6 +1,10 @@
-# Compiling Interbase/Firebird extension for PHP 5.6.10 under MAC OS X
+# Compiling Interbase/Firebird extension for PHP 5/7 under MAC OS X
 
 Short tutorial on how to compile Firebird extension for PHP under MAC OS X El Capitan 10.11
+
+## Update 2020-03-30
+
+The tutorial is still working, keep in mind that this tutorial is for Firebird 2.5.x only!
 
 <hr>
 
