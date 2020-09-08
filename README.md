@@ -1,17 +1,35 @@
 # Compiling Interbase/Firebird extension for PHP 5/7 under MAC OS X
 
-Short tutorial on how to compile Firebird extension for PHP under MAC OS X El Capitan 10.11
-
-## Update 2020-03-30
-
-The tutorial is still working, keep in mind that this tutorial is for Firebird 2.5.x only!
-
-<hr>
+Short tutorial on how to compile Firebird extension for PHP under MAC OS.
 
 ## Before compiling PHP extension you must have
 - Autoconf, you can install it via Homebrew (brew install autoconf) 
 - Because we needs Firebird libs. for compiling interbase, we have to download Firebird Server Package (http://www.firebirdsql.org/en/downloads), download the LIPO package (important!)
 
+## Update 2020-09-08
+
+Interbase extension is currently not shipped with PHP source code. But below you will find way to achieve it.
+
+## Let's compile! (MAMP 5.7 ... PHP 7.4.2 )
+
+@MartinKoeditz is working on driver for PHP>=7.1. The repo is here: https://github.com/FirebirdSQL/php-firebird. We cannot download final driver, one needs to compile it, here is how.
+
+<ol>
+  <li>git clone https://github.com/FirebirdSQL/php-firebird.git</li>
+  <li>cd php-firebard</li>
+  <li>/Applications/MAMP/bin/php/php7.4.2/bin/phpize</li>
+  <li>CPPFLAGS="-I/usr/local/lib/Firebird.framework/Headers" ./configure</li>
+  <li>make</li>
+  <li>make install</li>
+  <li>Open MAMP pro PHP 7.4.2 config file (.ini extension) and append new line: extension=interbase.so</li>
+  <li>Restart MAMP server</li>
+</ol>
+
+<hr>
+
+## Update 2020-03-30
+
+The tutorial is still working, keep in mind that this tutorial is for Firebird 2.5.x only!
 
 ## Let's compile! (MAMP 4.1.1 ... PHP 7.1.1)
 
